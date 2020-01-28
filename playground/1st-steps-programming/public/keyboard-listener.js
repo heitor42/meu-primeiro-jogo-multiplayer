@@ -13,8 +13,6 @@ export default function creatKeyboardListener(document) {
     }
 
     function notifyAll(command) {
-        console.log(`keboardListener -> Notifying ${state.observers.length} observes`)
-
         for (const observerFunction of state.observers) {
             observerFunction(command)
         }
